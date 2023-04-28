@@ -1,0 +1,41 @@
+@terraforming_station = 13
+
+entity = {
+	name = "css_fedbuild_01_aesthetic_terraform_station_entity"
+	pdxmesh = "css_fedbuild_01_mining_station_mesh"
+	locator = { name = "part1" position = { 0 0 0 } }
+	locator = { name = "beam1" position = { 0 3 0 } scale = 110 rotation = { 0 -90 0 } }
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no }
+	scale = 1.0
+	game_data = {
+		size = @terraforming_station
+	}
+	attach = { "beam1" = "terraforming_effect_entity" }
+}
+
+entity = {
+	name = "css_fedbuild_02_aesthetic_terraform_station_entity"
+	clone = "css_fedbuild_01_aesthetic_terraform_station_entity"
+}
+
+entity = {
+	name = "css_fedbuild_03_aesthetic_terraform_station_entity"
+	pdxmesh = "css_fedbuild_03_mining_station_mesh"
+	locator = { name = "part1" position = { 0 0 0 } }
+	locator = { name = "beam1" position = { 0 3 0 } scale = 110 rotation = { 0 -90 0 } }
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "death" state_time = 5 looping = no }
+	scale = 1.0
+	game_data = {
+		size = @terraforming_station
+	}
+	attach = { "beam1" = "terraforming_effect_entity" }
+}
+
+entity = {
+	name = "css_fedbuild_04_aesthetic_terraform_station_entity"
+	clone = "css_fedbuild_03_aesthetic_terraform_station_entity"
+}
